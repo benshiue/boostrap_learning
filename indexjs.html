@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!-- html5 的標籤標準規定 -->
+<html>
+	<head>
+		<title>test boostrap</title>
+		<meta charset="UTF-8"> <!-- 需要加入讓WEB知道有中文編碼 -->
+		<meta name="viewport" content="width=device-width, initital-scale=1.0"> <!--網頁如要以手機為主，需加入viewport設置-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="js/bootstrap.min.js"></script>
+		<script> 
+		function myfun () {    <!-- //Javascript的function，要寫前都需要用<script></scrpt>包起來// -->
+			
+			alert("Ben您好"); //直接跳出alert視窗
+			var x,y;
+			x = confirm("are you sure?"); //挑出視窗選擇確定x接收為true，取消接收為false
+			//document.write("my name is ben"); 
+			
+			// body...
+		}
+		function myfun2(){
+			var x; // local var
+			var z;
+			z=myfun3(3,4); // call myfun3 function去取回回傳值
+			var y=3;
+			if (y==3) 
+				{
+					x= "Ben您好";
+
+				}
+			else if (y==4) 
+				{
+					X="WTF";
+				};
+			
+			document.getElementById('demo').innerHTML=x; 
+			//利用document.getElementById('demo')找出<p id ="demo"></p>的端落，並用innerHTML方法將內容取代為HELLO
+		}
+		function myfun3(var1, var2)
+		{
+			var x = var1+var2;
+			return x; //回傳值
+			document.getElementById('demo').innerHTML=x;
+		}
+		</script>
+
+	</head>
+	<body>
+				
+		<div class="row"> 
+			<div class="col-lg-4 col-4"><h1>Hello</h1></div>  
+			<div class="col-lg-4 col-4"><h2>world</h2></div>
+			<div class="col-lg-4 col-4"><h2>Ben</h2></div>
+		</div>
+		<div class="row"> 
+			<div class="col-lg-4">
+				<button class="btn btn-default" onclick="myfun()">
+				click A
+				</button>
+			</div> 
+			<div class="col-lg-4">
+				<button class="btn" onclick="myfun3(3,4)"> <!--傳值去call myfun3 function -->
+				<span class="glyphicon glyphicon-asterisk"></span> click B 
+				</button>
+			</div>
+			<div class="col-lg-4"><button onclick="myfun2()">click C</button></div>
+			<!-- 用此button onclick 屬性去call js function -->
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>廣告資訊</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			我的文章
+			</h2>
+			<p class="alert">我希望你八月份將工作專注在論文、報告撰寫。論文的部分可先把架構整理出來，我想投稿到「2014中華民國科技管理學會年會暨論文研討會」</p> 
+		<p>集山可交由產品支援組William處理，今天拜訪永錡回來，請與Ben、我一起討論一下分工，謝謝。</p> 
+		<p id="demo">而另外像Tokai、集山也都需要再協助處理，昨日才又處理與了解集山問題，此部分都需考量。</p>
+			</div>
+			
+		</div>
+		
+	</body>	
+</html>

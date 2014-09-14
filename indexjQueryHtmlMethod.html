@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- html5 的標籤標準規定 -->
+<html>
+	<head>
+		<title>test boostrap</title>
+		<meta charset="UTF-8"> <!-- 需要加入讓WEB知道有中文編碼 -->
+		<meta name="viewport" content="width=device-width, initital-scale=1.0"> <!--網頁如要以手機為主，需加入viewport設置-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="js/bootstrap.min.js"></script>
+		
+		<script src="js/jquery.min.js"></script> <!--需要去jquery網站載jquery lib放入網頁資料夾OR利用利用CDN方式讓連網後自動去抓-->
+		<script>
+		$(document).ready(function(){ //在整個網頁讀取完畢後，執行後面的function()
+			$("#btn1").click(function(){ 
+			//利用jquery的功能$ 去選取id = btn element，只要有觸發click event，即執行後面的function()
+				$("img").attr("width","200"); //被選到的dom中的element，利用 method更改其屬性()
+			});
+
+			$("#btn2").click(function(){
+				var el;
+				el = $("#p1").clone(); //複製element id = p1的內容
+				$("#p1").append(el); //將複製的內容加到elemet id = p1 之後
+			});
+
+			$("#btn3").click(function(){
+				$("#p1").wrap("<h1></h1>"); //在element id =p1外面多加<h1> element
+			});
+		});
+
+		
+		function myfun2()
+		{
+						
+		}
+		function myfun3()
+		{
+			
+		}
+
+		</script>
+
+	</head>
+	<body> 
+				
+		<div class="row"> 
+			<div class="col-lg-4 col-4"><h1>Hello</h1></div>  
+			<div class="col-lg-4 col-4"><h2>world</h2></div>
+			<div class="col-lg-4 col-4"><h2>Ben</h2></div>
+			
+		</div>
+		<div class="row"> 
+			<div class="col-lg-4">
+				your name: <input></input>
+				<h1 id = "demo2">this is info.</h1>
+
+				<button class="btn btn-default" onclick="myfun()">
+				click A
+				</button>
+			</div> 
+			<div class="col-lg-4">
+				<button class="btn" onclick="myfun2()"> 
+				<span class="glyphicon glyphicon-asterisk"></span> 
+				click B 
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button onclick="myfun3()">click C</button>
+				<button onclick="myfun4()">click D</button>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>廣告資訊</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			我的文章
+			</h2>
+			
+			<p id="demo">而另外像Tokai、集山也都需要再協助處理，昨日才又處理與了解集山問題，此部分都需考量。</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>DOMtest</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			HTML method test for jquery
+			</h2>
+			<div id ="div1">
+			<p id = "p1">this is paragraph1.</p>
+			<p id = "p2">Hello Ben</p>
+			<img src="https://static.mokoversity.com/images/icons/head.png" width=100 height=100></img>
+			<button id="btn1">Button1</button>
+			<button id="btn2">Button2</button>
+			<button id="btn3">Button3</button>
+			<p>Good</p>
+
+			<p class="help-block">this p has class.</p>
+			<button onclick="myfun2()">push me</button>
+			</div>
+			</div>
+		</div>
+		
+	</body>	
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- html5 的標籤標準規定 -->
+<html>
+	<head>
+		<title>test boostrap</title>
+		<meta charset="UTF-8"> <!-- 需要加入讓WEB知道有中文編碼 -->
+		<meta name="viewport" content="width=device-width, initital-scale=1.0"> <!--網頁如要以手機為主，需加入viewport設置-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="js/bootstrap.min.js"></script>
+		<script> 
+		var myVar, myvar2;
+
+		function myfun () {   
+		  var str = document.getElementById("demo").childNodes; //他會顯示[nodelist]，list代表是個陣列
+		  var str2 = str.length;//來看陣列多長
+		  var str3 = str[0]; // 讀取childNodes陣列第一筆資料
+		  var str4 = document.getElementById("demo").attributes[0].nodeValue;//取得屬性第一筆名稱，應為demo
+		  document.write(str+"<br>"+str2+"<br>"+str3+"<br>"+str4);
+			
+		}
+		function myfun2()
+		{
+			var result, p4;
+			document.getElementById("p1").innerHTML="hello";
+			document.getElementById("p2").style.color="blue"; //將<p id="p2"></p>中的文字改為藍色
+			result = document.getElementById("p");
+			//document.getElementById("p3").innerHTML=result.length;
+			p4 = document.getElementById("p3");
+			document.getElementById("div1").removeChild(p4); // 刪除div1底下的子節點p3
+			
+		}
+		function myfun3()
+		{
+			
+		}
+
+		</script>
+
+	</head>
+	<body> 
+				
+		<div class="row"> 
+			<div class="col-lg-4 col-4"><h1>Hello</h1></div>  
+			<div class="col-lg-4 col-4"><h2>world</h2></div>
+			<div class="col-lg-4 col-4"><h2>Ben</h2></div>
+			
+		</div>
+		<div class="row"> 
+			<div class="col-lg-4">
+				<button class="btn btn-default" onclick="myfun()">
+				click A
+				</button>
+			</div> 
+			<div class="col-lg-4">
+				<button class="btn" onclick="myfun2()"> 
+				<span class="glyphicon glyphicon-asterisk"></span> 
+				click B 
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button onclick="myfun3()">click C</button>
+				<button onclick="myfun4()">click D</button>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>廣告資訊</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			我的文章
+			</h2>
+			
+			<p id="demo">而另外像Tokai、集山也都需要再協助處理，昨日才又處理與了解集山問題，此部分都需考量。</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>DOMtest</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			DOMTest
+			</h2>
+			<div id ="div1">
+			<p id = "p1">this is paragraph1.</p>
+			<p id = "p2">Hello Ben</p>
+			<p id = "p3">Good</p>
+			<button onclick="myfun2()">push me</button>
+			</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3"><h1>Inputbox</h1></div>
+			<div class="col-lg-6">
+				<form role="form">
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				   
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputFile">File input</label>
+				    <input type="file" id="exampleInputFile">
+				    <p class="help-block">Example block-level help text here.</p>
+				  </div>
+				  <div class="checkbox">
+				    <label>
+				      <input type="checkbox"> Check me out
+				    </label>
+				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
+			   </form>
+			</div>
+	</body>	
+</html>

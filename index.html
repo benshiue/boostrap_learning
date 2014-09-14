@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- html5 的標籤標準規定 -->
+<html>
+	<head>
+		<title>test boostrap</title>
+		<meta charset="UTF-8"> <!-- 需要加入讓WEB知道有中文編碼 -->
+		<meta name="viewport" content="width=device-width, initital-scale=1.0"> <!--網頁如要以手機為主，需加入viewport設置-->
+		<link href="css/bootstrap.min.css" rel="stylesheet"> 
+		<!--The <link> tag defines the relationship between a document and an external resource.-->
+		<script type="js/bootstrap.min.js"></script>
+
+        <!-- HTML internal CSS -->
+		<style type="text/css">  
+  			body {background-color:lightgrey}
+   			p    {color:green}   
+   			table, th, td {
+				    border: 1px solid black; 
+				    border-collapse: collapse;
+				}
+			th, td {
+				    padding: 15px; 
+				}
+		</style>
+
+		<!--[if lt IE 9]>  
+		<script src="html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+				
+		<div class="row"> <!-- 一個row代表一個頁面，一個row可以切12個col -->
+			<div class="col-lg-4 col-4"><h1>Hello</h1></div>  
+			<!-- col-lg-4 代表切4個col，col-4為responsive，不管大小屏幕都可做切割 -->
+			<div class="col-lg-4 col-4"><h2>world</h2></div>
+			<div class="col-lg-4 col-4"><h2>Ben</h2></div>
+		</div>
+		<div class="row"> <!--可以到boostrap網站 -> CSS -> grid system章節了解 -->
+			<div class="col-lg-4"><button class="btn btn-default">click A</button></div> 
+			<!--class="btn"為使用bosstrap的CSS樣式，CSS取class去改樣是為.col-lg-4 -->
+			<div class="col-lg-4">
+				<button class="btn">
+				<span class="glyphicon glyphicon-asterisk"></span> click B <!--透過Glyphicons去使用Boostrap原生的icons-->
+				</button>
+			</div>
+			<div class="col-lg-4"><button>click C</button></div>
+		</div>
+		<div class="row">  
+		<!--<div> element can be used to set style attributes to large blocks of content.<div> element, is for document layout-->
+			<div class="col-lg-3"><h1>廣告資訊</h1></div>
+			<div class="col-lg-9">
+			<h2><span class="glyphicon glyphicon-star"></span>
+			我的文章
+			</h2>
+			<p class="alert">我希望你八月份將工作專注在論文、報告撰寫。論文的部分可先把架構整理出來，我想投稿到「2014中華民國科技管理學會年會暨論文研討會」</p> <!--到boostrap網頁-> component可以找到素材，包含button or alert -->
+		<p title="文章段落">集山可交由產品支援組William處理，今天拜訪永錡回來，請與Ben、我一起討論一下分工，謝謝。</p> 
+		<!--每個段落會用1個<p></P> ，title attribute 為滑鼠移過去此段文章會顯示的字-->
+		<p style="font-size:160%">而另外像Tokai、集山也都需要再協助處理，昨日才又處理與了解集山問題，此部分都需考量。</p>
+		<!--HTML Inline CSS, use "style attribute" to edit-->
+			<img src="http://www.w3schools.com/images/w3schools_green.jpg", alt="HTML5 Icon" style="width:128px;height:128px"> <!--img element using -->
+
+			<table style="width:100%"> <!--HTML table element-->
+			  <tr>
+			    <td>Jill</td>
+			    <td>Smith</td>		
+			    <td>50</td>
+			  </tr>
+			  <tr>
+			    <td>Eve</td>
+			    <td>Jackson</td>		
+			    <td>94</td>
+			  </tr>
+			  <tr>
+			    <td>John</td>
+			    <td>Doe</td>		
+			    <td>80</td>
+			  </tr>
+			</table>
+			</div>
+			
+		</div>
+
+		<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<form role="form" autocomplete="on">  <!--可以auto completed -->
+			<!--HTML forms are used to pass data to a server.The most important form element is the <input> element.-->
+				<div class="form-group">
+					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" /> 
+					 <!--input element's "type attribute" can be checkbox, password, radio button, submit button.... -->
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" />
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile" />
+					<p class="help-block">
+						Example block-level help text here.
+					</p>
+				</div>
+				<div class="checkbox">
+					 <label><input type="checkbox" /> Check me out</label> 
+				</div> <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+	</body>	
+</html>
