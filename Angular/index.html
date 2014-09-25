@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test boostrap</title>
+		<meta charset="UTF-8"> <!-- 需要加入讓WEB知道有中文編碼 -->
+		<meta name="viewport" content="width=device-width, initital-scale=1.0"> <!--網頁如要以手機為主，需加入viewport設置-->
+		<link href="C:\Users\benshiue\Desktop\bootstrap-3.2.0-dist\css\bootstrap.min.css" rel="stylesheet"> 
+		<!--The <link> tag defines the relationship between a document and an external resource.-->
+		<script type="js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>  
+       
+		
+
+		<!--[if lt IE 9]>  
+		<script src="html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body ng-app> <!--宣告angular的範圍，DOM載入後Angular會開始尋找ng-app字眼，找到後會當成angular applicaiton-->
+				
+		<div class="row"> <!-- 一個row代表一個頁面，一個row可以切12個col -->
+			<div class="col-lg-4 col-4"><h1>Hello</h1></div>  
+			<div class="col-lg-4 col-4"><h2>Angular ng-model</h2>
+				<p>My name is {{yourName || 'Anna'}}!</p>  
+                <label>請輸入你的名字，也和大家自我介紹吧! </label>  
+                <input type="text" ng-model="yourName">  
+			</div>
+			<div class="col-lg-4 col-4"><h2>ng-controller</h2>
+			    <p ng-controller="TodoCrtl">My name is {{ name }}!</p>
+			</div>
+		</div>
+		
+		
+
+		
+	</body>	
+</html>
